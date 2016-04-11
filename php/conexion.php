@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 switch ($base = $_GET['IDB']){
     case '01':
         $db = 'mrbooks';
@@ -73,11 +71,5 @@ switch ($base = $_GET['IDB']){
         $nombreb = 'LIBRIMUNDI - JUAN LEON MERA';
         break; 
 }
-
-
-$conexion = mysql_connect('localhost', 'root', '');
+$conexion = mysql_connect('100.100.20.100', 'root', '');
 mysql_select_db($db, $conexion);
-
-
-
-?>

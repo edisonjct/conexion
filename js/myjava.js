@@ -4,24 +4,32 @@ $(function () {
         var desde = $('#bd-desde').val();
         var hasta = $('#bd-hasta').val();
         var IDB = $('#IDB').val();
-        var condicion = $('#cb-condicion').val();        
+        var condicion = $('#cb-condicion').val();
         $('#agrega-registros').html('<h2><div align="center"><img src="../recursos/cargando2.gif" width="100" /><div></h2>');
         var url = '../php/BuscaFacturas.php';
         $.ajax({
             type: 'GET',
             url: url,
-            data: 'desde=' + desde + '&hasta=' + hasta + '&IDB=' + IDB + '&condicion='+ condicion ,
+            data: 'desde=' + desde + '&hasta=' + hasta + '&IDB=' + IDB + '&condicion=' + condicion,
             success: function (datos) {
                 $('#agrega-registros').html(datos);
             }
         });
         return false;
     });
-    
-    
+
+
 
 });
 
+
+function reporteF() {
+    var desde = $('#bd-desde').val();
+    var hasta = $('#bd-hasta').val();
+    var IDB = $('#IDB').val();
+    var condicion = $('#cb-condicion').val();
+    window.location.href = '../php/ExcelFacturas.php?desde=' + desde + '&hasta=' + hasta + '&IDB=' + IDB + '&condicion=' + condicion;
+}
 
 function agregaRegistro() {
     var url = '../php/agrega_producto.php';

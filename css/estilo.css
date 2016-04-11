@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/04/2016, 12:20:19
+    Author     : DMRBOOKS\echulde
+*/
+
+body { 
+    background-color: #D3D3D3;
+}
+
+th {
+    background-color: #6495ED;
+}
+
+tr {
+    background-color: #FFF;
+}
